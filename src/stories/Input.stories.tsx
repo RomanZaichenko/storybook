@@ -6,4 +6,6 @@ export default {
   component: Input,
 }
 
-export const Password = () => <Input type="password"></Input>
+export const Password = () => <Input type="password" isClearable={false}></Input>
+export const Text = () => <Input type="text" isClearable={true}></Input>
+export const Number = () => <Input type="number" isClearable={false}></Input>

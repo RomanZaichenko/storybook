@@ -1,18 +1,30 @@
 import {useState} from "react";
 
+
 interface InputProps {
   type: "text" | "password" | "number";
+  isClearable: boolean;
 }
 
-export const Input: React.FC<InputProps> = ({type}) => {
-  const [eye, setEye] = useState<boolean>(false);
-  const [clearable, setClearable] = useState<boolean>(false);
-  const [title, setTitle] = useState<string>('');
+export const Input = ({type, isClearable}: InputProps) => {
+  const [isPasswordHidden, setPasswordHidden] = useState(true);
+  const [eye, setEye] = useState();
 
-  return (
-    <>
-      <label htmlFor="input">{type}</label>
-      <input id="input" />
-    </>
-  )
+
+  const handleEyeToggle = () => {
+    if (isPasswordHidden) {
+
+    }
+  }
+
+
+  if (type === "password") {
+    return (
+      <>
+        <label htmlFor="input">{type}</label>
+        <input id="input" />
+
+      </>
+    )
+  }
 }
